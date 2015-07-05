@@ -1,2 +1,0 @@
-# kame
-Kana Kame
