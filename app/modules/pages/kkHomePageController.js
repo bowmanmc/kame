@@ -1,8 +1,8 @@
-angular.module('kk').controller('kkHomePageController', function($scope, DataService) {
+angular.module('kk').controller('kkHomePageController', function($scope, KameLevels, Scoreboard) {
     'use strict';
 
     var initialize = function() {
-        DataService.loadLevelData();
+        Scoreboard.initialize();
     };
     initialize();
 });
