@@ -82,7 +82,87 @@ angular.module('kk').factory('KameLevels', function() {
         // Level 2 - End
     }];
 
-    var katakanaLevels = [];
+    var katakanaLevels = [{
+        // Level 1 - Start
+        "name": "Level 1",
+        "description": "a-o",
+        "level": "1",
+        "type": "Katakana",
+        "characters": [{
+            "en": "a",
+            "jp": "ア",
+            "sound": "lvl-01-char-a.wav"
+        }, {
+            "en": "i",
+            "jp": "イ",
+            "sound": "lvl-01-char-i.wav"
+        }, {
+            "en": "u",
+            "jp": "ウ",
+            "sound": "lvl-01-char-u.wav"
+        }, {
+            "en": "e",
+            "jp": "エ",
+            "sound": "lvl-01-char-e.wav"
+        }, {
+            "en": "o",
+            "jp": "オ",
+            "sound": "lvl-01-char-o.wav"
+        }], // characterss
+        "words": [{
+        }]
+        // Level 1 - End
+    }, {
+        // Level 2 - Start
+        "name": "Level 2",
+        "description": "ka-ko, ga-go",
+        "level": "2",
+        "type": "Katakana",
+        "characters": [{
+            "en": "ka",
+            "jp": "カ",
+            "sound": "lvl-02-char-ka.wav"
+        }, {
+            "en": "ki",
+            "jp": "キ",
+            "sound": "lvl-02-char-ki.wav"
+        }, {
+            "en": "ku",
+            "jp": "ク",
+            "sound": "lvl-02-char-ku.wav"
+        }, {
+            "en": "ke",
+            "jp": "ケ",
+            "sound": "lvl-02-char-ke.wav"
+        }, {
+            "en": "ko",
+            "jp": "コ",
+            "sound": "lvl-02-char-ko.wav"
+        }, {
+            "en": "ga",
+            "jp": "ガ",
+            "sound": "lvl-02-char-ga.wav"
+        }, {
+            "en": "gi",
+            "jp": "ギ",
+            "sound": "lvl-02-char-gi.wav"
+        }, {
+            "en": "gu",
+            "jp": "グ",
+            "sound": "lvl-02-char-gu.wav"
+        }, {
+            "en": "ge",
+            "jp": "ゲ",
+            "sound": "lvl-02-char-ge.wav"
+        }, {
+            "en": "go",
+            "jp": "ゴ",
+            "sound": "lvl-02-char-go.wav"
+        }], // characters - level
+        "words": [{
+        }]
+        // Level 2 - End
+    }];
 
     return {
         'hirigana': hiriganaLevels,
