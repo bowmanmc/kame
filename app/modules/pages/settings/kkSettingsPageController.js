@@ -1,4 +1,4 @@
-angular.module('kk').controller('kkSettingsPageController', function($scope, Scoreboard) {
+angular.module('kk').controller('kkSettingsPageController', function($scope, Config, Scoreboard) {
     'use strict';
 
 
@@ -7,4 +7,8 @@ angular.module('kk').controller('kkSettingsPageController', function($scope, Sco
         Scoreboard.reset();
     };
 
+    var initialize = function() {
+        $scope.Config = Config;
+    };
+    initialize();
 });
