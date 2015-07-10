@@ -62,4 +62,5 @@ angular.module('kk').service('Scoreboard', function(localStorageService, Config)
         console.log('Scores: ' + JSON.stringify(this.scores));
         console.log('---- ---- ---- ---- ---- ---- --');
     };
+    this.initialize();
 });

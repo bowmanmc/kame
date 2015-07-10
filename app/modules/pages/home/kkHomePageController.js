@@ -2,7 +2,7 @@ angular.module('kk').controller('kkHomePageController', function($scope, KameLev
     'use strict';
 
     var initialize = function() {
-        Scoreboard.initialize();
+        $scope.Scoreboard = Scoreboard;
     };
     initialize();
 });

@@ -1,11 +1,11 @@
 angular.module('kk').factory('KameLevels', function() {
 
-    return [{
+    var hiriganaLevels = [{
         // Level 1 - Start
-        "name": "Hirigana - Level 1",
+        "name": "Level 1",
         "description": "a-o",
         "level": "1",
-        "type": "hirigana",
+        "type": "Hirigana",
         "characters": [{
             "en": "a",
             "jp": "あ",
@@ -32,10 +32,10 @@ angular.module('kk').factory('KameLevels', function() {
         // Level 1 - End
     }, {
         // Level 2 - Start
-        "name": "Hirigana - Level 2",
+        "name": "Level 2",
         "description": "ka-ko, ga-go",
         "level": "2",
-        "type": "hirigana",
+        "type": "Hirigana",
         "characters": [{
             "en": "ka",
             "jp": "か",
@@ -81,5 +81,12 @@ angular.module('kk').factory('KameLevels', function() {
         }]
         // Level 2 - End
     }];
+
+    var katakanaLevels = [];
+
+    return {
+        'hirigana': hiriganaLevels,
+        'katakana': katakanaLevels
+    };
 
 });

@@ -20,11 +20,15 @@ app.config(function($routeProvider) {
     $routeProvider
     .when('/', {
         controller: 'kkHomePageController',
-        templateUrl: 'modules/pages/kkHomePageTemplate.html'
+        templateUrl: 'modules/pages/home/kkHomePageTemplate.html'
     })
     .when('/settings', {
         controller: 'kkSettingsPageController',
         templateUrl: 'modules/pages/settings/kkSettingsPageTemplate.html'
+    })
+    .when('/progress', {
+        controller: 'kkProgressPageController',
+        templateUrl: 'modules/pages/progress/kkProgressPageTemplate.html'
     })
     .otherwise({
         redirectTo: '/'
