@@ -30,6 +30,10 @@ app.config(function($routeProvider) {
         controller: 'kkProgressPageController',
         templateUrl: 'modules/pages/progress/kkProgressPageTemplate.html'
     })
+    .when('/level/:levelId', {
+        controller: 'kkLevelPageController',
+        templateUrl: 'modules/pages/level/kkLevelPageTemplate.html'
+    })
     .otherwise({
         redirectTo: '/'
     });
