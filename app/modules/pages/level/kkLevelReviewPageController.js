@@ -1,4 +1,4 @@
-angular.module('kk').controller('kkLevelPageController', function($scope, $routeParams, KameLevels, Scoreboard) {
+angular.module('kk').controller('kkLevelReviewPageController', function($scope, $routeParams, KameLevels, Scoreboard) {
     'use strict';
 
     var initialize = function() {

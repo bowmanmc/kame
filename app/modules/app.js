@@ -34,6 +34,10 @@ app.config(function($routeProvider) {
         controller: 'kkLevelPageController',
         templateUrl: 'modules/pages/level/kkLevelPageTemplate.html'
     })
+    .when('/level/:levelId/review', {
+        controller: 'kkLevelReviewPageController',
+        templateUrl: 'modules/pages/level/kkLevelReviewPageTemplate.html'
+    })
     .otherwise({
         redirectTo: '/'
     });

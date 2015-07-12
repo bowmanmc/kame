@@ -12,7 +12,7 @@
     <h2>Katakana</h2>
     <ul>
         <li ng-repeat="level in KameLevels.katakana">
-            {{ level.name }}
+            <a href="#/level/{{ level.id }}">{{ level.name }}</a>
         </li>
     </ul>
 
