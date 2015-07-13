@@ -1,7 +1,19 @@
 
 <h1>{{ level.name }} Review</h1>
 
+<hr />
 
+<kk-review-card character="level.characters[currentIndex]"></kk-review-card>
+
+<hr />
+
+<a class="btn btn-default"
+    ng-show="hasPrevious()"
+    ng-click="previous()">Previous</a>
+
+<a class="btn btn-default"
+    ng-show="hasNext()"
+    ng-click="next()">Next</a>
 
 <hr />
 
