@@ -92,6 +92,7 @@ gulp.task('watch', function () {
 gulp.task('browser-sync', function() {
 
     browserSync({
+        notify: false,
         port: 9000,
         files: [
             'app/*.html',

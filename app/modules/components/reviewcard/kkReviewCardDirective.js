@@ -7,7 +7,8 @@ angular.module('kk').directive('kkReviewCard', function() {
         templateUrl: 'modules/components/reviewcard/kkReviewCardTemplate.html',
         controller: 'kkReviewCardController',
         scope: {
-            character: '='
+            character: '=',
+            level: '='
         }
     };
 });
