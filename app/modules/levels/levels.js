@@ -1,9 +1,13 @@
 angular.module('kk').factory('KameLevels', function(
-    LvlH01, LvlH02, LvlH03, LvlH04, LvlH05, LvlH06,
+    LvlH01, LvlH02, LvlH03, LvlH04, LvlH05,
+    LvlH06, LvlH07, LvlH08, LvlH09, LvlH10,
     LvlK01, LvlK02
     ) {
 
-    var hiriganaLevels = [LvlH01, LvlH02, LvlH03, LvlH04, LvlH05, LvlH06];
+    var hiriganaLevels = [
+        LvlH01, LvlH02, LvlH03, LvlH04, LvlH05,
+        LvlH06, LvlH07, LvlH08, LvlH09, LvlH10
+    ];
 
     var katakanaLevels = [LvlK01, LvlK02];
 
