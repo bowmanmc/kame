@@ -1,5 +1,27 @@
-<div class="reviewcard">
+<div class="reviewcard" ng-click="flip()">
 
-    <h1>{{ character.jp }}</h1>
+    <div class="character jp" ng-hide="showBack">
+        {{ character.jp }}
+    </div>
+
+    <div class="character en" ng-show="showBack">
+        {{ character.en }}
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="card-btn pull-left">
+                    <i class="fa fa-refresh"></i>
+                </div>
+
+                <div class="card-btn pull-right" ng-click="playSound($event)">
+                    <i class="fa fa-play"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </div>
