@@ -31,9 +31,11 @@ angular.module('kk').service('Scoreboard', function(localStorageService, Config)
     };
 
     this.loadFromStorage = function() {
+        console.time('lsload');
         this.scores = localStorageService.get(this.KEY_SCORES);
         this.seen = localStorageService.get(this.KEY_SEEN);
         this.meta = localStorageService.get(this.KEY_META);
+        console.timeEnd('lsload');
     };
 
     this.initializeMeta = function() {
