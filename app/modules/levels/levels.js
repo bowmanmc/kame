@@ -82,6 +82,140 @@ angular.module('kk').factory('KameLevels', function() {
         "words": [{
         }]
         // Level 2 - End
+    }, {
+        // Level 3 - Start
+        "id": "h03",
+        "name": "Level 3",
+        "description": "sa-so, za-zo",
+        "level": "3",
+        "type": "Hirigana",
+        "characters": [{
+            "en": "sa",
+            "jp": "さ",
+            "sound": "lvl-03-char-sa.wav"
+        }, {
+            "en": "shi",
+            "jp": "し",
+            "sound": "lvl-03-char-shi.wav"
+        }, {
+            "en": "su",
+            "jp": "す",
+            "sound": "lvl-03-char-su.wav"
+        }, {
+            "en": "se",
+            "jp": "せ",
+            "sound": "lvl-03-char-se.wav"
+        }, {
+            "en": "so",
+            "jp": "そ",
+            "sound": "lvl-03-char-so.wav"
+        }, {
+            "en": "za",
+            "jp": "ざ",
+            "sound": "lvl-03-char-za.wav"
+        }, {
+            "en": "ji",
+            "jp": "じ",
+            "sound": "lvl-03-char-ji.wav"
+        }, {
+            "en": "zu",
+            "jp": "ず",
+            "sound": "lvl-03-char-zu.wav"
+        }, {
+            "en": "ze",
+            "jp": "ぜ",
+            "sound": "lvl-03-char-ze.wav"
+        }, {
+            "en": "zo",
+            "jp": "ぞ",
+            "sound": "lvl-03-char-zo.wav"
+        }], // characters - level
+        "words": [{
+        }]
+        // Level 3 - End
+    }, {
+        // Level 4 - Start
+        "id": "h04",
+        "name": "Level 4",
+        "description": "ta-to, da-do",
+        "level": "4",
+        "type": "Hirigana",
+        "characters": [{
+            "en": "ta",
+            "jp": "た",
+            "sound": "lvl-04-char-ta.wav"
+        }, {
+            "en": "chi",
+            "jp": "ち",
+            "sound": "lvl-04-char-chi.wav"
+        }, {
+            "en": "tsu",
+            "jp": "つ",
+            "sound": "lvl-04-char-tsu.wav"
+        }, {
+            "en": "te",
+            "jp": "て",
+            "sound": "lvl-04-char-te.wav"
+        }, {
+            "en": "to",
+            "jp": "と",
+            "sound": "lvl-04-char-to.wav"
+        }, {
+            "en": "da",
+            "jp": "ざ",
+            "sound": "lvl-04-char-da.wav"
+        }, {
+            "en": "ji",
+            "jp": "ぢ",
+            "sound": "lvl-04-char-ji.wav"
+        }, {
+            "en": "du",
+            "jp": "づ",
+            "sound": "lvl-04-char-du.wav"
+        }, {
+            "en": "de",
+            "jp": "で",
+            "sound": "lvl-04-char-de.wav"
+        }, {
+            "en": "do",
+            "jp": "ど",
+            "sound": "lvl-04-char-do.wav"
+        }], // characters - level
+        "words": [{
+        }]
+        // Level 4 - End
+    }, {
+        // Level 5 - Start
+        "id": "h05",
+        "name": "Level 5",
+        "description": "na-no",
+        "level": "5",
+        "type": "Hirigana",
+        "characters": [{
+            "en": "na",
+            "jp": "な",
+            "sound": "lvl-05-char-na.wav"
+        }, {
+            "en": "ni",
+            "jp": "に",
+            "sound": "lvl-05-char-ni.wav"
+        }, {
+            "en": "nu",
+            "jp": "ぬ",
+            "sound": "lvl-05-char-nu.wav"
+        }, {
+            "en": "ne",
+            "jp": "ね",
+            "sound": "lvl-05-char-ne.wav"
+        }, {
+            "en": "no",
+            "jp": "の",
+            "sound": "lvl-05-char-no.wav"
+        }], // characters - level
+        "words": [{
+        }]
+        // Level 5 - End
+
     }];
 
     var katakanaLevels = [{
