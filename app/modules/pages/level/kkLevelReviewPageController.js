@@ -3,26 +3,19 @@ angular.module('kk').controller('kkLevelReviewPageController', function($scope, 
 
     $scope.currentIndex = 0;
 
-    $scope.hasPrevious = function() {
-        if ($scope.currentIndex < 1) {
-            return false;
-        }
-        return true;
-    };
-
-    $scope.hasNext = function() {
-        if ($scope.currentIndex >= ($scope.level.characters.length - 1)) {
-            return false;
-        }
-        return true;
-    };
-
-    $scope.next = function() {
-        $scope.currentIndex++;
+    $scope.first = function() {
+        $scope.currentIndex = 0;
     };
     $scope.previous = function() {
         $scope.currentIndex--;
     };
+    $scope.next = function() {
+        $scope.currentIndex++;
+    };
+    $scope.last = function() {
+        $scope.currentIndex = $scope.level.characters.length - 1;
+    };
+
 
     var initialize = function() {
         $scope.Scoreboard = Scoreboard;

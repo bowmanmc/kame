@@ -7,13 +7,30 @@
 
 <hr />
 
-<a class="btn btn-default"
-    ng-show="hasPrevious()"
-    ng-click="previous()">Previous</a>
+<div class="container">
+    <div class="row">
 
-<a class="btn btn-default"
-    ng-show="hasNext()"
-    ng-click="next()">Next</a>
+        <div class="col-xs-12 center">
+            <div class="btn-group">
+                <button class="btn btn-default"
+                    ng-disabled="currentIndex < 1"
+                    ng-click="first()">First</button>
+
+                <button class="btn btn-default"
+                    ng-disabled="currentIndex < 1"
+                    ng-click="previous()">Prev</button>
+
+                <button class="btn btn-default"
+                    ng-disabled="currentIndex >= level.characters.length - 1"
+                    ng-click="next()">Next</button>
+
+                <button class="btn btn-default"
+                    ng-disabled="currentIndex >= level.characters.length - 1"
+                    ng-click="last()">Last</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <hr />
 

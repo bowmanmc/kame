@@ -1,14 +1,19 @@
 <div class="reviewcard" ng-click="flip()">
-
-    <div class="character jp" ng-hide="showBack">
-        {{ character.jp }}
-    </div>
-
-    <div class="character en" ng-show="showBack">
-        {{ character.en }}
-    </div>
-
     <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+        <div class="character jp" ng-hide="showBack">
+            {{ character.jp }}
+        </div>
+
+        <div class="character en" ng-show="showBack">
+            {{ character.en }}
+        </div>
+
+            </div>
+        </div><!-- row -->
+
         <div class="row">
             <div class="col-xs-12">
 
