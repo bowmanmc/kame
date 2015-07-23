@@ -3,7 +3,6 @@ angular.module('kk').controller('kkReviewCardController', function($scope, Score
 
     $scope.showBack = false;
     $scope.flip = function() {
-        console.log('flipping card!');
         $scope.showBack = !$scope.showBack;
     };
 
@@ -14,7 +13,7 @@ angular.module('kk').controller('kkReviewCardController', function($scope, Score
 
     var initialize = function() {
         $scope.$watch('character', function() {
-            console.log('-- Card.character changed!');
+            $scope.showBack = false;
             Scoreboard.updateSeenCharacter($scope.level.id, $scope.character);
         });
     };

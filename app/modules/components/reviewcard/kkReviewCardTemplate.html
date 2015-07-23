@@ -1,33 +1,23 @@
-<div class="reviewcard" ng-click="flip()">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
+<div class="reviewcard" ng-click="flip2()">
 
-        <div class="character jp" ng-hide="showBack">
-            {{ character.jp }}
-        </div>
 
-        <div class="character en" ng-show="showBack">
-            {{ character.en }}
-        </div>
-
-            </div>
-        </div><!-- row -->
-
-        <div class="row">
-            <div class="col-xs-12">
-
-                <div class="card-btn pull-left">
-                    <span ng-show="showBack">en</span>
-                    <span ng-hide="showBack">jp</span>
-                </div>
-
-                <div class="card-btn pull-right" ng-click="playSound($event)">
-                    <i class="fa fa-play"></i>
-                </div>
-
+    <div class="card" ng-click="flip()" ng-class="{'flipped': showBack}">
+        <div class="card__front">
+            <div class="card__text">
+                {{ character.jp }}
             </div>
         </div>
+
+        <div class="card__back">
+            <div class="card__text">
+                {{ character.en }}
+            </div>
+
+            <div class="card__btn pull-right" ng-click="playSound($event)">
+                <i class="fa fa-play"></i>
+            </div>
+        </div>
+
     </div>
 
 </div>
