@@ -38,6 +38,10 @@ app.config(function($routeProvider) {
         controller: 'kkLevelReviewPageController',
         templateUrl: 'modules/pages/level/kkLevelReviewPageTemplate.html'
     })
+    .when('/level/:levelId/quiz', {
+        controller: 'kkLevelQuizPageController',
+        templateUrl: 'modules/pages/level/kkLevelQuizPageTemplate.html'
+    })
     .otherwise({
         redirectTo: '/'
     });

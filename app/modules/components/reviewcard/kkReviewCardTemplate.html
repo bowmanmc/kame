@@ -1,10 +1,14 @@
-<div class="reviewcard" ng-click="flip2()">
+<div class="reviewcard">
 
 
     <div class="card" ng-click="flip()" ng-class="{'flipped': showBack}">
         <div class="card__front">
             <div class="card__text">
                 {{ character.jp }}
+            </div>
+
+            <div class="card__btn pull-left" ng-click="flip()">
+                <i class="fa fa-refresh"></i>
             </div>
         </div>
 
@@ -13,8 +17,12 @@
                 {{ character.en }}
             </div>
 
+            <div class="card__btn pull-left" ng-click="flip()">
+                <i class="fa fa-refresh"></i>
+            </div>
+
             <div class="card__btn pull-right" ng-click="playSound($event)">
-                <i class="fa fa-play"></i>
+                <i class="fa fa-volume-up"></i>
             </div>
         </div>
 
