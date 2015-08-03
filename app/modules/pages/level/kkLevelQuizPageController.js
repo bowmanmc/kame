@@ -16,6 +16,21 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
         $scope.currentIndex = $scope.level.characters.length - 1;
     };
 
+    // Fisher–Yates shuffle
+    // http://bost.ocks.org/mike/shuffle/
+    var shuffle = function(array) {
+        var m = array.length, t, i;
+        // While there remain elements to shuffle…
+        while (m) {
+            // Pick a remaining element…
+            i = Math.floor(Math.random() * m--);
+            // And swap it with the current element.
+            t = array[m];
+            array[m] = array[i];
+            array[i] = t;
+        }
+        return array;
+    };
 
     var initialize = function() {
         $scope.Scoreboard = Scoreboard;
@@ -23,7 +38,8 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
 
         var levelId = $routeParams.levelId;
         $scope.level = KameLevels.getLevel(levelId);
-
+        $scope.quizItems = shuffle($scope.level.characters);
+        console.log('Quiz Items: ' + JSON.stringify($scope.quizItems));
     };
     initialize();
 });
