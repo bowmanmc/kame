@@ -3,6 +3,8 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
 
     $scope.currentIndex = 0;
 
+    $scope.candidates = [];
+
     $scope.first = function() {
         $scope.currentIndex = 0;
     };
@@ -39,7 +41,13 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
         var levelId = $routeParams.levelId;
         $scope.level = KameLevels.getLevel(levelId);
         $scope.quizItems = shuffle($scope.level.characters);
-        console.log('Quiz Items: ' + JSON.stringify($scope.quizItems));
+        $scope.candidates = shuffle($scope.level.characters.slice(0));
+
+        $scope.$watch('currentIndex', function(newIdx, oldIdx) {
+            console.log('currentIndex changed!');
+            shuffle($scope.candidates);
+        });
+
     };
     initialize();
 });

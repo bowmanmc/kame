@@ -22,7 +22,24 @@
                 <i class="fa fa-volume-up"></i>
             </div>
         </div>
-
     </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+    <div ng-repeat="candidate in candidates">
+        <div class="col-xs-3">
+            <div class="card card-sm">
+                <div class="card__front">
+                    <div class="card__text-sm">
+                        {{ candidate.en }}
+                    </div>
+                </div>
+            </div>
+        </div><!-- col -->
+    </div>
+
+        </div><!-- row -->
+    </div><!-- container -->
 
 </div>
