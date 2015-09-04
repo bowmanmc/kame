@@ -1,4 +1,4 @@
-angular.module('kk').controller('kkLevelQuizPageController', function($scope, $routeParams, KameLevels, Scoreboard) {
+angular.module('kk').controller('kkLevelQuizPageController', function($scope, $routeParams, ArrayHelper, KameLevels, Scoreboard) {
     'use strict';
 
     $scope.currentIndex = 0;
@@ -18,34 +18,38 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
         $scope.currentIndex = $scope.level.characters.length - 1;
     };
 
-    // Fisher–Yates shuffle
-    // http://bost.ocks.org/mike/shuffle/
-    var shuffle = function(array) {
-        var m = array.length, t, i;
-        // While there remain elements to shuffle…
-        while (m) {
-            // Pick a remaining element…
-            i = Math.floor(Math.random() * m--);
-            // And swap it with the current element.
-            t = array[m];
-            array[m] = array[i];
-            array[i] = t;
+    $scope.checkGuess = function(guess) {
+        console.log('Checking answer...');
+        if (guess === $scope.quizItems[$scope.currentIndex]) {
+            console.log('    You got it!');
+            $scope.currentIndex++;
         }
-        return array;
+        else {
+            console.log('    Nope!');
+        }
     };
 
+    // The .slice(0) is a cheap way to get JavaScript to make a copy of an array
     var initialize = function() {
         $scope.Scoreboard = Scoreboard;
         $scope.KameLevels = KameLevels;
 
         var levelId = $routeParams.levelId;
         $scope.level = KameLevels.getLevel(levelId);
-        $scope.quizItems = shuffle($scope.level.characters);
-        $scope.candidates = shuffle($scope.level.characters.slice(0));
+        $scope.quizItems = ArrayHelper.shuffle($scope.level.characters.slice(0));
 
-        $scope.$watch('currentIndex', function(newIdx, oldIdx) {
-            console.log('currentIndex changed!');
-            shuffle($scope.candidates);
+        $scope.$watch('currentIndex', function() {
+            var answer = $scope.quizItems[$scope.currentIndex];
+
+            // We only want 4 candidate answers
+            var shuffled = ArrayHelper.shuffle($scope.level.characters.slice(0, 4));
+
+            if (shuffled.indexOf(answer) < 0) {
+                var idx = ArrayHelper.randomIndex(shuffled);
+                shuffled[idx] = answer;
+            }
+
+            $scope.candidates = shuffled;
         });
 
     };

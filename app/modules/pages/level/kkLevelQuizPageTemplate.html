@@ -29,7 +29,7 @@
 
     <div ng-repeat="candidate in candidates">
         <div class="col-xs-3">
-            <div class="card card-sm">
+            <div class="card card-sm" ng-click="checkGuess(candidate)">
                 <div class="card__front">
                     <div class="card__text-sm">
                         {{ candidate.en }}
