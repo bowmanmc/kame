@@ -4,6 +4,7 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
     $scope.currentIndex = 0;
 
     $scope.candidates = [];
+    $scope.tries = [];
 
     $scope.first = function() {
         $scope.currentIndex = 0;
@@ -19,13 +20,23 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
     };
 
     $scope.checkGuess = function(guess) {
-        console.log('Checking answer...');
+        var correct = false;
+        if ($scope.tries.indexOf(guess) > -1) {
+            // we've already tries this one... just return.
+            return;
+        }
+
         if (guess === $scope.quizItems[$scope.currentIndex]) {
-            console.log('    You got it!');
-            $scope.currentIndex++;
+            correct = true;
+        }
+
+        if (correct === true) {
+            // next handles ending the quiz if we're on the last card
+            $scope.next();
         }
         else {
-            console.log('    Nope!');
+            // mark the candidate as tried
+            $scope.tries.push(guess);
         }
     };
 
@@ -39,6 +50,7 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
         $scope.quizItems = ArrayHelper.shuffle($scope.level.characters.slice(0));
 
         $scope.$watch('currentIndex', function() {
+            $scope.tries = [];
             var answer = $scope.quizItems[$scope.currentIndex];
 
             // We only want 4 candidate answers

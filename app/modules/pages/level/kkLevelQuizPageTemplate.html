@@ -29,13 +29,17 @@
 
     <div ng-repeat="candidate in candidates">
         <div class="col-xs-3">
-            <div class="card card-sm" ng-click="checkGuess(candidate)">
-                <div class="card__front">
+            <div class="card card-sm"
+                ng-click="checkGuess(candidate)">
+
+                <div class="card__front"
+                    ng-class="{'card__tried': tries.indexOf(candidate) > -1}">
                     <div class="card__text-sm">
                         {{ candidate.en }}
                     </div>
                 </div>
-            </div>
+
+            </div><!-- card -->
         </div><!-- col -->
     </div>
 
