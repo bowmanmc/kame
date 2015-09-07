@@ -23,7 +23,6 @@ angular.module('kk').controller('kkLevelReviewPageController', function($scope, 
 
         var levelId = $routeParams.levelId;
         $scope.level = KameLevels.getLevel(levelId);
-
     };
     initialize();
 });

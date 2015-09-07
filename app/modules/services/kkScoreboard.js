@@ -30,6 +30,34 @@ angular.module('kk').service('Scoreboard', function(localStorageService, Config)
         localStorageService.set(this.KEY_SEEN, this.seen);
     };
 
+    this.updateQuizCharacterScore = function(levelId, character, isCorrect) {
+        var now = moment();
+        var key = levelId + '-' + character.en;
+        var record = this.scores.characters[key];
+        if (typeof record === 'undefined' || record === null) {
+            record = {
+                firstShown: now.format(this.DATE_FMT),
+                lastCorrect: null,
+                lastWrong: null,
+                numCorrect: 0,
+                numWrong: 0
+            };
+        }
+
+        record.lastShown = now.format(this.DATE_FMT);
+        if (isCorrect === true) {
+            record.numCorrect++;
+            record.lastCorrect = now.format(this.DATE_FMT);
+        }
+        else {
+            record.numWrong++;
+            record.lastWrong = now.format(this.DATE_FMT);
+        }
+
+        this.scores.characters[key] = record;
+        localStorageService.set(this.KEY_SCORES, this.scores);
+    };
+
     this.loadFromStorage = function() {
         console.time('lsload');
         this.scores = localStorageService.get(this.KEY_SCORES);
@@ -52,7 +80,8 @@ angular.module('kk').service('Scoreboard', function(localStorageService, Config)
         var now = moment.utc();
         var s = {};
         s.created = now.format(this.DATE_FMT);
-        s.levels = [];
+        s.characters = {};
+        s.levels = {};
         s.version = Config.version;
 
         localStorageService.set(this.KEY_SCORES, s);

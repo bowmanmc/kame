@@ -30,6 +30,12 @@ angular.module('kk').controller('kkLevelQuizPageController', function($scope, $r
             correct = true;
         }
 
+        Scoreboard.updateQuizCharacterScore(
+            $scope.level.id,
+            $scope.quizItems[$scope.currentIndex],
+            correct
+        );
+
         if (correct === true) {
             // next handles ending the quiz if we're on the last card
             $scope.next();
