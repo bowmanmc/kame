@@ -5,8 +5,11 @@
 
 // Defaults
 @import 'defaults/colors';
+@import 'defaults/layout';
 @import 'defaults/tags';
+@import 'defaults/page';
 
 // Components
 
 // Pages
+@import 'pages/HomePage';
