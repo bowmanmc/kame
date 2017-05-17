@@ -14,10 +14,8 @@ class Card extends React.Component {
     }
 
     flip() {
-        let f = this.state.flipped;
-        console.log('Setting flipped to ' + (!f));
         this.setState({
-            flipped: !f
+            flipped: !this.state.flipped
         });
     }
 
@@ -32,11 +30,10 @@ class Card extends React.Component {
                     <div className="face back">
                         en
                     </div>
-                    <p></p>
                 </div>
             </div>
         );
     }
-};
+}
 
 export default Card;
