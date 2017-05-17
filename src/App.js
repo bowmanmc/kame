@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import HomePage from './pages/HomePage';
+import PropTypes from 'prop-types';
 
 
 class App extends Component {
@@ -12,5 +11,9 @@ class App extends Component {
         );
     }
 }
+
+App.propTypes = {
+    children: PropTypes.object
+};
 
 export default App;
