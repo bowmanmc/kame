@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Kame from '../components/kame';
+import Card from '../components/card';
+//import Kame from '../components/kame';
 
 
 const HomePage = () => {
     return (
         <div className="HomePage">
-            <Kame />
+            <Card />
         </div>
     );
 };
