@@ -1,12 +1,11 @@
 import React from 'react';
-
-import Kame from '../components/kame';
+import { Link } from 'react-router';
 
 
 const HomePage = () => {
     return (
         <div className="HomePage">
-            <Kame />
+            <Link to="/review">Review</Link>
         </div>
     );
 };

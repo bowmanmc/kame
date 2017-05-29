@@ -1,4 +1,7 @@
 
 export default {
-    completed: []
+    hot: [],
+    warm: [],
+    cold: [],
+    lessons: []
 };
