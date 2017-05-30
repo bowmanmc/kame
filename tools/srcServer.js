@@ -13,9 +13,13 @@ import config from '../webpack.config.dev';
 
 const bundler = webpack(config);
 
+const PORT = process.env.PORT || 9000;
+const HOST = process.env.IP || 'localhost';
+
 // Run Browsersync and use middleware for Hot Module Replacement
 browserSync({
-    port: 9000,
+    port: PORT,
+    host: HOST,
     ui: {
         port: 9001
     },
