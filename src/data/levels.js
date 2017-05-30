@@ -2,6 +2,7 @@ import Hiragana from './hiragana';
 import Katakana from './katakana';
 
 export default {
+    'categories': ['Hiragana', 'Katakana'],
     'hiragana': Hiragana,
     'katakana': Katakana,
     'getLevel': function(levelId) {
